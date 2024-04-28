@@ -13,7 +13,6 @@ Opportunities Seeker is a web application designed to help individuals seek for 
 - [Testing](#testing)
 - [Documentation](#documentation)
 - [Team Members](#team-members)
-- [License](#license)
 
 ## Features
 
