@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/review.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"/>
+<link rel="icon" type="image/x-icon" href="/images/OSLogo.png">
+
+
+</head>
+
+<body>
+<!-- #####--HOME--##### -->
+
+<div class="home">
+  <nav>
+    <div class="navbar homelist">
+      <a href="/"><img src="/images/OSLogo.png" class="logo"></a>
+      <div class="text">
+        <h2><span>O</span>pportunities <span>S</span>eeker</h2>
+      </div>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/scholarships">SCHOLARSHIPS</a></li>
+        <li><a href="/events">EVENTS</a></li>
+        <li><a href="/aboutus">ABOUT US</a></li>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<br>
+<br>
+<section>
+<div class="info">
+    <h1>Welcome to <span>O</span>pportunities <span>S</span>eeker!</h1><br>
+    <h3>We are here to help you find scholarships,<br> competitions, trainings, and exchange programs.</h3>
+</div><br>
+</section>
+
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <a href="/piu"><img src="/images/piu-scholarship.jpg" style="width:100%"></a>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <a href="/kit"><img src="/images/kit-scholarship.jpg" style="width:100%"></a>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <a href="/aupp"><img src="/images/aupp-scholarship.jpg" style="width:100%"></a>
+  </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+
+<div class="spacer layer1"></div>
+<section class="orange">
+<div class="scholarship">
+  <div class="Tcenter">
+    <div class="info">
+      <h1>Scholarships</h1><br>
+      <h3>Looking for scholarships?<br> We have just the right thing for you!</h3><br>
+    </div><br>
+      <a href="/scholarships"><div class="HomeSch"></div></a>
+  </div>
+</div>
+</section>
+
+<div class="spacer layer2"></div>
+<section class="gray">
+<div class="events">
+  <div class="Tcenter">
+    <div class="info">
+      <h1>Events</h1><br>
+      <h3>Looking for exciting events?<br> We have every events up to date here!</h3><br>
+    </div><br>
+      <a href="/events"><div class="HomeEvent"></div></a>
+  </div>
+</div>
+ </section>
+
+<div class="spacer layer3"></div>
+ <main>
+  <section class="container">
+    <div class="info">
+      <h1>Our reviews</h1>
+      <div class="underline"></div>
+    </div>
+    <!-- review -->
+    <article class="review">
+      <div class="img-container">
+        <img src="person.jpg" id="person-img" alt="" />
+      </div>
+      <h4 id="author">sara jones</h4>
+      <p id="job">ux designer</p>
+      <p id="info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+        asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+        Iste, doloremque nihil?
+      </p>
+      <!-- prev next buttons-->
+      <div class="button-container">
+        <button class="prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      
+    </article>
+  </section>
+</main>
+
+
+<!-- #####--FOOTER--##### -->
+
+<div class="footer">
+
+<!-- ###-CONTACT-### -->
+
+  <div class="contact">
+    <h1>Contact us</h1><br>
+    <form id="contact-form" th:action="@{/addContact}" th:object="${contact}" method="post">
+      <div class="form_group">
+        <div class="form_item">
+          <label>
+            <input type="text" class="form_input" th:field="*{name}" placeholder="Your name" required>
+          </label>
+        </div>
+        <div class="form_item">
+          <label>
+            <input type="email" class="form_input" th:field="*{email}" placeholder="Your email" required>
+          </label>
+        </div>
+      </div>
+      <div class="form_item">
+        <label>
+          <input type="text" class="form_input" th:field="*{phone}" placeholder="Your phone (optional)">
+        </label>
+      </div>
+      <div class="form_item">
+        <label>
+          <textarea th:field="*{message}" cols="30" rows="10" class="form_textarea" placeholder="Your message" required></textarea>
+        </label>
+      </div>
+      <button type="submit" class="form_submit button button-primary">Send message</button>
+    </form>
+  </div>
+
+
+
+    <div class="footer_block">
+      <h2 class="footer_title">Newsletter</h2>
+        <div class="footer_content">
+          <p>Subscribe to receive updates.</p>
+        </div>
+          <form method="post" id="footer-newsletter" accept-charset="UTF-8" class="footer_newsletter form">
+              <div class="form_item">
+                <input type="email" name="email" class="form_input" placeholder="Enter your email address" required="">
+              </div>
+            <button type="submit" class="form_submit button button-primary">Subscribe</button>
+          </form>
+    </div><br>
+
+      <div class="icons">
+          <a target="_blank" href="https://twitter.com/Tuy_Pascal">
+            <button class="icon-btn">
+              <span class="twitter-icon"></span></button></a>
+      </div>
+
+        <div class="clear"></div>
+      <div class="icons">
+        <a target="_blank" href="https://www.facebook.com/OpportunitiesSeeker">
+          <button class="icon-btn">
+            <span class="facebook-icon"></span></button></a>
+        
+      </div>
+    <h5>&copy 2022 OS Studios</h5>
+
+</div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="/js/home.js"></script>
+<script src="/js/review.js"></script>
+
+</body>
+</html>

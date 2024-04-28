@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.WebFinalProject.WebFinalProjectApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.238 s -- in com.example.WebFinalProject.WebFinalProjectApplicationTests
